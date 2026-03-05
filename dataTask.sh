@@ -41,4 +41,25 @@ else
 fi
 }
 
+#supprimer_base() {
+if [ -f "tasks.txt" ]
+then
+	echo "Etes-vous sur de vouloir supprimer ? (yes/no)"
+	read answer
+		if [ "$answer" == "yes" ]
+		then
+			rm tasks.txt
+			echo "fichier efface"
+		elif [ "$answer" == "no" ]
+		then
+			echo "suppression annulee"
+		else
+			echo "reponse invalide"
+		fi
+
+else
+	echo "base non existante"
+fi
+#}
+
 
